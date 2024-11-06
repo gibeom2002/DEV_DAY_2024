@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<body>
+<div class="container">
+    <form method="post" action="/member/sign-up/answer">
+        <div class="form_group">
+            <label for="member_id">아이디
+                <input type="text" id="member_id" name="member_id" placeholder="아이디를 입력하세요"/>
+            </label> <br>
+            <label for="member_pw">비밀번호
+                <input type="password" id="member_pw" name="member_pw" placeholder="비밀번호를 입력하세요."/>
+            </label> <br>
+            <label for="member_name">이름
+                <input type="text" id="member_name" name="member_name" placeholder="이름을 입력하세요."/>
+            </label> <br>
+            <label for="member_date">생년월일
+                <input type="date" id="member_date" name="member_date" placeholder="생년월일을 입력하세요.">
+            </label> <br>
+            <label for="member_income">한 달 수입
+                <input type="number" id="member_income" name="member_income" placeholder="1000000">
+            </label> <br>
+            <label for="member_home">거주지
+                <select id="member_home" name="member_home">
+                    <option value="중구">중구</option>
+                    <option value="동구">동구</option>
+                    <option value="서구">서구</option>
+                    <option value="영도구">영도구</option>
+                    <option value="부산진구">부산진구</option>
+                    <option value="동래구">동래구</option>
+                    <option value="연제구">연제구</option>
+                    <option value="금정구">금정구</option>
+                    <option value="북구">북구</option>
+                    <option value="사상구">사상구</option>
+                    <option value="사하구">사하구</option>
+                    <option value="강서구">강서구</option>
+                </select>
+            </label> <br>
+            <label>
+                <input type="checkbox" name="member_category" value="category1"/>카테고리1
+            </label>
+            <label>
+                <input type="checkbox" name="member_category" value="category2"/>카테고리2
+            </label>
+            <label>
+                <input type="checkbox" name="member_category" value="category3"/>카테고리3
+            </label>
+            <button type="submit">회원가입</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

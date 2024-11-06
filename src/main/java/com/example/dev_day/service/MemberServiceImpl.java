@@ -3,26 +3,37 @@ package com.example.dev_day.service;
 import lombok.RequiredArgsConstructor;
 import com.example.dev_day.entity.Member;
 import com.example.dev_day.dto.MemberFormDTO;
-import com.example.dev_day.repository.Member_repository;
+import com.example.dev_day.repository.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-// 내가 서비스다.
+import java.util.Arrays;
+
 @Service
-// MemberRepository의 생성자를 사용안하기 위함
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService
 {
-    private final Member_repository memberRepository;
+    @Autowired
+    private MemberRepository memberRepository;
 
     @Override
     public Long join(MemberFormDTO memberFormDTO){
         Member member = Member.builder()
-                .user_pw(memberFormDTO.getUser_pw())
-                .user_id((memberFormDTO.getUser_id()))
-                .user_name(memberFormDTO.getUser_name())
-                .user_home(memberFormDTO.getUser_home())
-                .user_date(memberFormDTO.getUser_date())
+                .member_id(memberFormDTO.getMember_id())
+                .member_pw(memberFormDTO.getMember_pw())
+                .member_name(memberFormDTO.getMember_name())
+                .member_date(memberFormDTO.getMember_date())
+                .member_income(memberFormDTO.getMember_income())
+                .member_home(memberFormDTO.getMember_home())
+                .member_category(
+                        (memberFormDTO.getMember_category() != null) ?
+                            String.join(",", memberFormDTO.getMember_category()) : "")
                 .build();
+
         return memberRepository.save(member).getId();
+    }
+    @Override
+    public void update(MemberFormDTO memberFormDTO) {
+        return;
     }
 }
