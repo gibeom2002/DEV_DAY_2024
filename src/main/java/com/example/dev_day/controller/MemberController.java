@@ -21,6 +21,15 @@ public class MemberController {
     @PostMapping("/member/sign-up/answer")
     public String createMember(@ModelAttribute MemberFormDTO memberFormDTO)
     {
+        System.out.println(memberFormDTO.getMember_id());
+        System.out.println(memberFormDTO.getMember_pw());
+        System.out.println(memberFormDTO.getMember_name());
+
+        System.out.println(memberFormDTO.getMember_date());
+        System.out.println(memberFormDTO.getMember_income());
+        System.out.println(memberFormDTO.getMember_home());
+        System.out.println(memberFormDTO.getMember_category());
+
         Long memberId = memberService.join(memberFormDTO);
         return "redirect:/member/login";
     }

@@ -13,7 +13,7 @@ public class Member
     // PK로 지정
     @Id
     // 자동 id 생성
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     // 객체 필드와 DB 테이블 컬럼을 매핑

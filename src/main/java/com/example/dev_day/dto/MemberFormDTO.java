@@ -19,5 +19,5 @@ public class MemberFormDTO {
     private Date member_date;
     private int member_income;
     private String member_home;
-    private ArrayList<String> member_category;
+    private String[] member_category;
 }

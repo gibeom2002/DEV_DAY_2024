@@ -7,6 +7,8 @@ import com.example.dev_day.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+
 @Service
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService
@@ -24,7 +26,8 @@ public class MemberServiceImpl implements MemberService
                 .member_income(memberFormDTO.getMember_income())
                 .member_home(memberFormDTO.getMember_home())
                 .member_category(
-                        String.join(",", memberFormDTO.getMember_category()))
+                        (memberFormDTO.getMember_category() != null) ?
+                            String.join(",", memberFormDTO.getMember_category()) : "")
                 .build();
 
         return memberRepository.save(member).getId();
