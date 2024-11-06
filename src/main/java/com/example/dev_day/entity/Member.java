@@ -1,4 +1,4 @@
-package com.example.dev_day.member_domain;
+package com.example.dev_day.entity;
 
 
 import jakarta.persistence.*;

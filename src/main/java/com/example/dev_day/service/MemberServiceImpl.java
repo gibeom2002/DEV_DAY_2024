@@ -1,9 +1,9 @@
-package com.example.dev_day.member_service;
+package com.example.dev_day.service;
 
 import lombok.RequiredArgsConstructor;
-import com.example.dev_day.member_domain.Member;
-import com.example.dev_day.member_dto.MemberFormDTO;
-import com.example.dev_day.member_repository.Member_repository;
+import com.example.dev_day.entity.Member;
+import com.example.dev_day.dto.MemberFormDTO;
+import com.example.dev_day.repository.Member_repository;
 import org.springframework.stereotype.Service;
 
 // 내가 서비스다.

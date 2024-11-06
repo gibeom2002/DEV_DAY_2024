@@ -1,6 +1,5 @@
-package com.example.dev_day.member_dto;
+package com.example.dev_day.dto;
 
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
