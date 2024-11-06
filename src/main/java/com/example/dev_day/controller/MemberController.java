@@ -1,8 +1,8 @@
-package com.example.dev_day.join;
+package com.example.dev_day.controller;
 
 import lombok.RequiredArgsConstructor;
-import com.example.dev_day.member_dto.MemberFormDTO;
-import com.example.dev_day.member_service.MemberService;
+import com.example.dev_day.dto.MemberFormDTO;
+import com.example.dev_day.service.MemberService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
