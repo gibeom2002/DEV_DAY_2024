@@ -1,11 +1,13 @@
 package com.example.dev_day.entity;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.sql.Date;
+import java.util.ArrayList;
 
 @Entity
 @Data           // getter and setter 구현
@@ -26,12 +28,15 @@ public class Member
     private String user_id;
     @Column(name="u_pw", nullable = false)
     private String user_pw;
-    @Column(name="phone_num", nullable = false)
-    private String phone_num;
     @Column(name="u_name", nullable = false)
     private String user_name;
+
     @Column(name="u_date", nullable = false)
-    private String user_date;
+    private Date user_date;
+    @Column(name="u_income", nullable = false)
+    private int user_income;
     @Column(name="u_home", nullable = false)
     private String user_home;
+    @Column(name="u_category", nullable = true)
+    private ArrayList<String> user_category;
 }

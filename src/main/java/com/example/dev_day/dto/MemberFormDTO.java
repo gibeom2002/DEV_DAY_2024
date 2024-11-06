@@ -4,15 +4,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Date;
+import java.util.ArrayList;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class MemberFormDTO {
-
+    // 기본 정보
     private String user_id;
     private String user_pw;
-    private String phone_num;
     private String user_name;
-    private String user_date;
+    // 분석에 사용할 정보
+    private Date user_date;
+    private int user_income;
     private String user_home;
+    private ArrayList<String> user_category;
 }
