@@ -12,12 +12,12 @@ import java.util.ArrayList;
 @AllArgsConstructor
 public class MemberFormDTO {
     // 기본 정보
-    private String user_id;
-    private String user_pw;
-    private String user_name;
+    private String member_id;
+    private String member_pw;
+    private String member_name;
     // 분석에 사용할 정보
-    private Date user_date;
-    private int user_income;
-    private String user_home;
-    private ArrayList<String> user_category;
+    private Date member_date;
+    private int member_income;
+    private String member_home;
+    private ArrayList<String> member_category;
 }

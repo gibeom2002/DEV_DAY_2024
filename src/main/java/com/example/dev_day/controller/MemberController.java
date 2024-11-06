@@ -5,6 +5,7 @@ import com.example.dev_day.dto.MemberFormDTO;
 import com.example.dev_day.service.MemberService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -18,7 +19,7 @@ public class MemberController {
         return "/member/signup";
     }
     @PostMapping("/member/sign-up/answer")
-    public String createMember(MemberFormDTO memberFormDTO)
+    public String createMember(@ModelAttribute MemberFormDTO memberFormDTO)
     {
         Long memberId = memberService.join(memberFormDTO);
         return "redirect:/member/login";

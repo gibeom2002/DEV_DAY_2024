@@ -17,12 +17,16 @@ public class MemberServiceImpl implements MemberService
     @Override
     public Long join(MemberFormDTO memberFormDTO){
         Member member = Member.builder()
-                .user_pw(memberFormDTO.getUser_pw())
-                .user_id((memberFormDTO.getUser_id()))
-                .user_name(memberFormDTO.getUser_name())
-                .user_home(memberFormDTO.getUser_home())
-                .user_date(memberFormDTO.getUser_date())
+                .member_id(memberFormDTO.getMember_id())
+                .member_pw(memberFormDTO.getMember_pw())
+                .member_name(memberFormDTO.getMember_name())
+                .member_date(memberFormDTO.getMember_date())
+                .member_income(memberFormDTO.getMember_income())
+                .member_home(memberFormDTO.getMember_home())
+                .member_category(
+                        String.join(",", memberFormDTO.getMember_category()))
                 .build();
+
         return memberRepository.save(member).getId();
     }
     @Override
